@@ -3,7 +3,7 @@ import s from './s.module.scss'
 
 export const ContactInfo = () => {
     return (
-        <div className={s.contact_info}>
+        <header className={s.contact_info}>
             <Image
                 alt='contact-avatar'
                 width={75}
@@ -14,6 +14,6 @@ export const ContactInfo = () => {
                 <p className={s.name}>Anil</p>
                 <p className={s.date}>Online - Last seen, 2.02pm</p>
             </div>
-        </div>
+        </header>
     )
 }

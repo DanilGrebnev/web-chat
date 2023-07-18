@@ -1,10 +1,7 @@
-.messages_wrapper {
+.message_container {
     display: grid;
-    grid-template-rows: auto minmax(0 1fr) auto;
     gap: 30px;
     padding: 30px 44px;
-}
 
-.messages_field {
-    // border: 1px solid black;
+    grid-template-rows: auto 1fr auto;
 }

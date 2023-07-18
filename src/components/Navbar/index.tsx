@@ -11,7 +11,8 @@ export const NavBar: FC = () => {
             <Layout
                 tag='ul'
                 color='purple'
-                className={s.layout}>
+                className={s.layout}
+            >
                 <Avatar className={s.avatar} />
                 <NavBarList />
             </Layout>

@@ -4,7 +4,7 @@ import { ILayout } from './type'
 import cn from 'classnames'
 import s from './s.module.scss'
 
-export const Layout = forwardRef<unknown, ILayout>(
+export const Layout = forwardRef<any, ILayout>(
     (
         {
             id,
@@ -23,9 +23,10 @@ export const Layout = forwardRef<unknown, ILayout>(
             <Tag
                 id={id}
                 style={style}
-                className={cn(s.Layout, className, s[color], {
+                className={cn(s.Layout, s[color], className, {
                     [s['box-shadow']]: boxShadow,
-                })}>
+                })}
+            >
                 {children}
             </Tag>
         )

@@ -1,6 +1,10 @@
 @import '@variables';
 
-.group-layout {
+.grouping-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    overflow: auto;
 
     h3 {
         height: auto;
@@ -8,9 +12,10 @@
     }
 
     ul {
-        margin-top: 17px;
+        overflow: auto;
         display: flex;
         flex-direction: column;
-        gap: 17px;
+        gap: 10px;
+        padding-right: 10px;
     }
 }

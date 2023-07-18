@@ -1,3 +1,21 @@
+//Отключение стилизации инпута
+%resetting-input-styles {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+%content-centering {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+}
+
 @mixin title_frends-lists {
     color: #303030;
     font-family: Roboto;

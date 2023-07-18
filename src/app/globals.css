@@ -10,6 +10,14 @@
     --light-silver: #eff6fc;
 }
 
+body {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg);
+}
+
 * {
     box-sizing: border-box;
     text-decoration: none;

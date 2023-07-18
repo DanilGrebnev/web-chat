@@ -1,0 +1,12 @@
+.message_page {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100%;
+    gap: 20px;
+}
+
+.contact_list {
+    display: grid;
+    grid-template-rows: auto 300px 1fr;
+    gap: 20px;
+}

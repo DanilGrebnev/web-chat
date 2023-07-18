@@ -1,18 +1,14 @@
 .App {
     margin: 0 auto;
-    background: var(--main-bg);
-    width: 100dvw;
-    height: 100dvh;
-    display: grid;
-    padding: 20px;
-
-    grid-template-columns: minmax(0, 133px) minmax(0, 534px) minmax(0, 1fr);
-
     column-gap: 20px;
-}
+    box-sizing: border-box;
 
-.contact_list {
+    width: 98%;
+    height: 100%;
+
     display: grid;
-    grid-template-rows: auto 300px 1fr;
-    gap: 20px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 98%;
+
+    align-content: center;
 }

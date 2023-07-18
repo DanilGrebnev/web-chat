@@ -1,6 +1,8 @@
 @import '@variables';
 
 .group_list {
+    overflow: hidden;
+
     li:last-child {
         border-bottom: none;
     }

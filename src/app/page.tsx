@@ -1,10 +1,8 @@
-import axios from 'axios'
 import { Roboto } from 'next/font/google'
 import React from 'react'
 import s from './s.module.scss'
-import { GroupList, NavBar, SearchBar } from '@/components'
-import { FrendsList } from '@/components'
-import { Messages } from '@/components'
+import { NavBar } from '@/components'
+import { MessagePage } from '@/components/MessagePage'
 import cn from 'classnames'
 
 const roboto = Roboto({
@@ -16,21 +14,13 @@ const roboto = Roboto({
 
 const MyApp = () => {
     return (
-        <main
+        <section
+            id='App'
             className={cn(s.App, roboto.className)}
-            id='App'>
-            <div
-                id='Navbar'
-                className={s.navbar}>
-                <NavBar />
-            </div>
-            <div className={s.contact_list}>
-                <SearchBar />
-                <GroupList />
-                <FrendsList />
-            </div>
-            <Messages className={s.messages} />
-        </main>
+        >
+            <NavBar />
+            <MessagePage />
+        </section>
     )
 }
 

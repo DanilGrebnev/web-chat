@@ -1,5 +1,5 @@
 import { ContactsItem } from '../ContactsItem'
-import { ContactsLayout } from '@layouts/GroupingLayout'
+import { GroupingLayout } from '@layouts/GroupingLayout'
 import { FC } from 'react'
 
 import s from './s.module.scss'
@@ -7,12 +7,14 @@ import s from './s.module.scss'
 // Компонент списка групп
 export const GroupList: FC = () => {
     return (
-        <ContactsLayout
+        <GroupingLayout
             className={s.group_list}
-            title='Groups'>
+            title='Groups'
+        >
             <ContactsItem />
             <ContactsItem />
             <ContactsItem />
-        </ContactsLayout>
+            <ContactsItem />
+        </GroupingLayout>
     )
 }
