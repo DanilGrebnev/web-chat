@@ -1,0 +1,55 @@
+.item_wrapper {
+    display: grid;
+    gap: 21px;
+    grid-template-columns: auto 1fr auto;
+    justify-content: center;
+    border-bottom: 1px solid rgba(180, 171, 171, 0.66);
+    padding-bottom: 14px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.contact-content {
+    h5 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 16px;
+        color: #303030;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.contact-notification {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 6px;
+
+    h6 {
+        font-size: 16px;
+        font-weight: 300;
+        color: #7c7c7c;
+    }
+
+    div {
+        width: 22px;
+        height: 22px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

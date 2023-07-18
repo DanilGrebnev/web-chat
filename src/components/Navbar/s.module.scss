@@ -1,0 +1,17 @@
+.navbar {
+    height: 100%;
+}
+
+.layout {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content repeat(4, min-content) 1fr;
+    row-gap: 25px;
+    justify-items: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.logout {
+    align-self: end;
+}

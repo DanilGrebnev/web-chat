@@ -1,0 +1,12 @@
+@import '@variables';
+
+.title {
+    @include title_frends-lists;
+}
+
+.freds-list {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    overflow: hidden;
+}

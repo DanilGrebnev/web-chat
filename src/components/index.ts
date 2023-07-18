@@ -1,0 +1,7 @@
+export { Messages } from './Messages/index'
+export { NavBar } from './Navbar'
+export { Layout } from '../layouts/Layout'
+export { Avatar } from './Avatar'
+export { FrendsList } from './FrendsList'
+export { SearchBar } from './SearchBar'
+export { GroupList } from './GroupList'

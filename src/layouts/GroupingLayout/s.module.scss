@@ -1,0 +1,16 @@
+@import '@variables';
+
+.group-layout {
+
+    h3 {
+        height: auto;
+        @include title_frends-lists;
+    }
+
+    ul {
+        margin-top: 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+}
