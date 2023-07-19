@@ -1,9 +1,11 @@
+import { toJSON } from '../toJSON'
 import {
     TypeDelete,
     TypeFetchingData,
     TypeGet,
     TypePost,
     TypePut,
+    Request_Init,
 } from './types'
 
 const fetchingData: TypeFetchingData = async (url, options) => {
@@ -35,18 +37,26 @@ export class fetchApi {
     }
 
     static post: TypePost = async (url, options) => {
-        return await fetchingData(url, { method: 'POST', ...options })
+        return await fetchingData(url, Options('POST', options))
     }
 
     static put: TypePut = async (url, options) => {
-        return await fetchingData(url, { method: 'PUT', ...options })
+        return await fetchingData(url, Options('PUT', options))
     }
 
     static delete: TypeDelete = async (url, options) => {
-        return await fetchingData(url, { method: 'DELETE', ...options })
+        return await fetchingData(url, Options('DELETE', options))
     }
 }
 
-function toJSON(value: any) {
-    return JSON.stringify(value)
+/**
+ * --Устанавливает метод запроса--
+ * Возвращает объект с методом запроса
+ * и текущими опциями
+ */
+function Options(
+    method: 'POST' | 'PUT' | 'DELETE',
+    options: Request_Init | undefined
+) {
+    return { method, ...options }
 }

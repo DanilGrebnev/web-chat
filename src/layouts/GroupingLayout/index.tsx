@@ -1,9 +1,16 @@
 import cn from 'classnames'
 import { Layout } from '../Layout'
-import s from './s.module.scss'
 import { forwardRef } from 'react'
 import { IGroupingLayout } from './type'
 
+import s from './s.module.scss'
+
+/**
+ * Компонент является обёрткой для
+ * списка групп и контактов
+ * @param title - заголовок
+ * @param children - любой компонент
+ */
 export const GroupingLayout = forwardRef<unknown, IGroupingLayout>(
     ({ style, className, title, children }, ref) => (
         <Layout
