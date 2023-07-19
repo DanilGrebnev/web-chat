@@ -1,13 +1,10 @@
 import './globals.css'
-import { ReactNode, FC } from 'react'
+import { FC } from 'react'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import cn from 'classnames'
-import s from './s.module.scss'
 import { ILayout } from '@/types/layout'
-import { AppCmp } from '@/components/AppComponent'
 
-interface IRootLayout extends ILayout {}
+import cn from 'classnames'
 
 const roboto = Roboto({
     weight: ['300', '400', '700'],
@@ -21,10 +18,10 @@ export const metadata: Metadata = {
     description: 'Home page',
 }
 
-const RootLayout: FC<IRootLayout> = ({ children }) => {
+const RootLayout: FC<ILayout> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={roboto.className}>{children}</body>
+            <body className={cn(roboto.className)}>{children}</body>
         </html>
     )
 }

@@ -1,8 +1,5 @@
 import React from 'react'
-import { AuthPage } from '@/PageComponents/AuthPage'
 
-const FirstPage = () => {
-    return <></>
-}
+const FirstPage = () => <></>
 
 export default FirstPage

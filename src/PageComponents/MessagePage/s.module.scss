@@ -1,7 +1,6 @@
 .message_page {
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 100%;
+    grid-template: 100% / auto 1fr;
     gap: 20px;
 }
 
