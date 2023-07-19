@@ -1,6 +1,5 @@
 'use client'
 import { forwardRef } from 'react'
-// import Link from 'next/link'
 import Image from 'next/image'
 import s from './s.module.scss'
 
@@ -22,8 +21,8 @@ export const ContactsItem = forwardRef(function FrendsItem(props, ref) {
                 </p>
             </div>
             <div className={s['contact-notification']}>
-                <h6>Today, 9.52pm</h6>
-                <div>4</div>
+                <p>Today, 9.52pm</p>
+                <div className={s['circle-notification']}>4</div>
             </div>
         </li>
     )

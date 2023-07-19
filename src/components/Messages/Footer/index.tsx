@@ -9,16 +9,18 @@ export const Footer = () => {
             <Layout
                 tag='div'
                 color='lightSilver'
-                className={s.input}>
+                className={s.input}
+            >
                 <input placeholder='Type your message here...' />
             </Layout>
             <Layout
                 tag='div'
                 color='purple'
-                className={s.send_btn}>
+                className={s.send_btn}
+            >
                 <Image
-                    width={45}
-                    height={45}
+                    width={35}
+                    height={35}
                     src={SendIcon}
                     alt='send button'
                 />

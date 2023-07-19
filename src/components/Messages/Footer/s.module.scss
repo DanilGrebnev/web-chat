@@ -8,12 +8,12 @@
 
 .input {
     width: 100%;
-    @extend %flex-center;
+    @extend %horizontal-center;
 
     input {
         @extend %resetting-input-styles;
 
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 300;
         font-family: inherit;
         background: var(--lightSilver);
@@ -21,18 +21,16 @@
 
         &::placeholder {
             font-weight: 300;
-            color: black;
+            background: var(--lightSilver);
         }
     }
 }
 
 .input,
 .send_btn {
-    padding: 0px 20px;
-    height: 78px;
+    padding: 15px;
 }
 
 .send_btn {
-    @extend %flex-center;
-    justify-content: center;
+    @extend %content-centering;
 }

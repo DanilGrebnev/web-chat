@@ -6,8 +6,8 @@ export const ContactInfo = () => {
         <header className={s.contact_info}>
             <Image
                 alt='contact-avatar'
-                width={75}
-                height={75}
+                width={55}
+                height={55}
                 src='/assets/contactinfo.png'
             />
             <div>

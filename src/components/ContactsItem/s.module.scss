@@ -1,3 +1,5 @@
+@import '@styles';
+
 .item_wrapper {
     display: grid;
     gap: 21px;
@@ -16,12 +18,12 @@
 .contact-content {
     h5 {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     p {
         font-weight: 300;
-        font-size: 16px;
+        font-size: 15px;
         color: #303030;
         max-width: 200px;
         white-space: nowrap;
@@ -36,20 +38,19 @@
     align-items: end;
     gap: 6px;
 
-    h6 {
-        font-size: 16px;
+    p {
+        font-size: 14px;
         font-weight: 300;
         color: #7c7c7c;
     }
+}
 
-    div {
-        width: 22px;
-        height: 22px;
-        background: red;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.circle-notification {
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    @extend %content-centering;
 }

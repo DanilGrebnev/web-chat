@@ -5,13 +5,15 @@
     font-family: inherit;
 }
 
+//Центрирование контента внутри блока
 %content-centering {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-%flex-center {
+//центрирование контента по горизонтали
+%horizontal-center {
     display: flex;
     align-items: center;
 }

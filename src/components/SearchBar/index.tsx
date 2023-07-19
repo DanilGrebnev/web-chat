@@ -9,11 +9,12 @@ export const SearchBar: FC = () => {
     return (
         <Layout
             boxShadow
-            className={s.search_bar}>
+            className={s.search_bar}
+        >
             <Image
                 alt='search_icon'
-                width={50}
-                height={50}
+                width={25}
+                height={25}
                 src={SearchIcon}
             />
             <input
