@@ -1,0 +1,21 @@
+@import '@styles';
+
+.Login {
+    max-width: 320px;
+    width: 100%;
+}
+
+.login_wrapper {
+    width: 500px;
+    @extend %content-centering;
+
+    form {
+        width: 100%;
+        background: white;
+        @extend %content-centering;
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        border-radius: 20px;
+    }
+}

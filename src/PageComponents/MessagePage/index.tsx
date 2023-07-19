@@ -5,9 +5,15 @@ import { Messages } from '@components/Messages'
 
 import s from './s.module.scss'
 
+/**
+ * --Страница сообщений--
+ */
 export const MessagePage = () => {
     return (
-        <section className={s.message_page}>
+        <section
+            id="Messages-page"
+            className={s.message_page}
+        >
             <section className={s.contact_list}>
                 <SearchBar />
                 <GroupList />

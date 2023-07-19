@@ -7,10 +7,13 @@ import s from './s.module.scss'
 
 export const NavBar: FC = () => {
     return (
-        <nav className={s.navbar}>
+        <nav
+            id="Navigation-Bar"
+            className={s.navbar}
+        >
             <Layout
-                tag='ul'
-                color='purple'
+                tag="ul"
+                color="purple"
                 className={s.layout}
             >
                 <Avatar className={s.avatar} />

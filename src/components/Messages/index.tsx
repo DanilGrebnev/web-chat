@@ -13,8 +13,8 @@ export const Messages: FC<IMessage> = ({ className }) => {
     return (
         <Layout
             boxShadow
-            id='Message-Content'
-            tag='section'
+            id="Messages-Content"
+            tag="section"
             className={cn(s.message_container, className)}
         >
             <ContactInfo />

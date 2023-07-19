@@ -4,10 +4,10 @@ import s from './s.module.scss'
 import Link from 'next/link'
 
 export const navbarList = [
-    { href: '/home', src: '/assets/navbar/home.svg' },
-    { href: '/messages', src: '/assets/navbar/messages.svg' },
-    { href: '/notification', src: '/assets/navbar/notification.svg' },
-    { href: '/setting', src: '/assets/navbar/setting.svg' },
+    { href: '/main/home', src: '/assets/navbar/home.svg' },
+    { href: '/main/messages', src: '/assets/navbar/messages.svg' },
+    { href: '/main/notification', src: '/assets/navbar/notification.svg' },
+    { href: '/main/setting', src: '/assets/navbar/setting.svg' },
 ]
 
 export const NavBarList = () => {

@@ -1,0 +1,19 @@
+@import '@styles';
+
+.wrapper {
+    width: 100%;
+    p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    input {
+        width: 100%;
+        margin-top: 8px;
+        @extend %resetting-input-styles;
+        border-radius: 4px;
+        border: 1px solid #eeeeee;
+        background: #f9f9f9;
+        padding: 8px;
+    }
+}
