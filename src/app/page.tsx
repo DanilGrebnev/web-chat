@@ -1,5 +1,5 @@
-import React from 'react'
+const MyApp = () => {
+    return <section>FirstPage</section>
+}
 
-const FirstPage = () => <></>
-
-export default FirstPage
+export default MyApp

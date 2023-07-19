@@ -1,10 +1,7 @@
 import './globals.css'
-import { FC } from 'react'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { ILayout } from '@/types/layout'
-
-import cn from 'classnames'
+import { ILayout } from '../types/layout'
 
 const roboto = Roboto({
     weight: ['300', '400', '700'],
@@ -15,13 +12,13 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
     title: 'First page',
-    description: 'Home page',
+    description: 'First page',
 }
 
-const RootLayout: FC<ILayout> = ({ children }) => {
+const RootLayout = ({ children }: ILayout) => {
     return (
         <html lang="en">
-            <body className={cn(roboto.className)}>{children}</body>
+            <body className={roboto.className}>{children}</body>
         </html>
     )
 }
