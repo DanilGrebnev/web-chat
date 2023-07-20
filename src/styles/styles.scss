@@ -1,3 +1,9 @@
+//Переменная шрифта
+%font-roboto {
+    font-family: var(--font-roboto);
+    line-height: normal;
+}
+
 //Отключение стилизации инпута
 %resetting-input-styles {
     border: none;

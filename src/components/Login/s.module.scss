@@ -19,3 +19,16 @@
         border-radius: 20px;
     }
 }
+
+.button {
+    outline: none;
+    border: none;
+    width: 70%;
+    border-radius: 20px;
+    @extend %content-centering;
+    
+    span {
+        @extend %font-roboto;
+        font-size: 20px;
+    }
+}

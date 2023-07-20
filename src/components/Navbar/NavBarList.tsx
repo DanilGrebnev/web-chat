@@ -1,14 +1,11 @@
+'use client'
+import cn from 'classnames'
 import Image from 'next/image'
 
 import s from './s.module.scss'
 import Link from 'next/link'
 
-export const navbarList = [
-    { href: '/main/home', src: '/assets/navbar/home.svg' },
-    { href: '/main/messages', src: '/assets/navbar/messages.svg' },
-    { href: '/main/notification', src: '/assets/navbar/notification.svg' },
-    { href: '/main/setting', src: '/assets/navbar/setting.svg' },
-]
+import { navbarList } from './data'
 
 export const NavBarList = () => {
     return (
@@ -18,7 +15,7 @@ export const NavBarList = () => {
                     <li key={i}>
                         <Link href={el.href}>
                             <Image
-                                alt='icon'
+                                alt="icon"
                                 width={50}
                                 height={50}
                                 src={el.src}
@@ -29,11 +26,11 @@ export const NavBarList = () => {
             })}
             <li className={s.logout}>
                 <Image
-                    loading='lazy'
-                    alt='logout'
+                    loading="lazy"
+                    alt="logout"
                     width={50}
                     height={50}
-                    src='/assets/navbar/logout.svg'
+                    src="/assets/navbar/logout.svg"
                 />
             </li>
         </>

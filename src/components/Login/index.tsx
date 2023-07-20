@@ -1,5 +1,6 @@
 import s from './s.module.scss'
-import { Input } from './Input'
+import { Input } from '@components/Input'
+import { Button } from '@components/Button'
 
 export const Login = () => {
     return (
@@ -13,7 +14,7 @@ export const Login = () => {
                     password
                     name="Password"
                 />
-                <button>Login</button>
+                <Button>Login</Button>
                 <p>
                     Don&apos;t have account? <a>Create a new account</a>
                 </p>
