@@ -6,4 +6,5 @@ export interface ILayout {
     boxShadow?: boolean
     tag?: keyof HTMLElementTagNameMap
     id?: string
+    onClick?: (e: React.SyntheticEvent) => void
 }

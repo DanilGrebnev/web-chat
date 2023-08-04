@@ -4,3 +4,12 @@
     font-size: 16px;
     width: max-content;
 }
+
+.author {
+    display: flex;
+    justify-content: end;
+
+    div {
+        background: rgb(180, 158, 158);
+    }
+}

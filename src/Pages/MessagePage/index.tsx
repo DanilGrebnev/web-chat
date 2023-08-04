@@ -11,7 +11,7 @@ import s from './s.module.scss'
 export const MessagePage = () => {
     return (
         <section
-            id="Messages-page"
+            id='Messages-page'
             className={s.message_page}
         >
             <section className={s.contact_list}>

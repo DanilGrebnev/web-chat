@@ -1,3 +1,6 @@
 .messages_field {
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

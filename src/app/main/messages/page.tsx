@@ -1,4 +1,4 @@
-import { MessagePage } from '@/PageComponents/MessagePage'
+import { MessagePage } from '@/Pages/MessagePage'
 
 const Messages = () => <MessagePage />
 

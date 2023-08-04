@@ -33,4 +33,6 @@
 
 .send_btn {
     @extend %content-centering;
+    outline: none;
+    border: none;
 }
