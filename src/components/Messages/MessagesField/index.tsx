@@ -4,9 +4,13 @@ import { useEffect, useRef, useState } from 'react'
 import { MessageItem } from './MessageItem'
 import s from './s.module.scss'
 import { $axios } from '@/lib/fetchApi'
-import { AxiosResponse } from 'axios'
+import { testData } from '@/testData'
+import { fetchMessages } from '@/redux/features/messagesSlice'
+import { useAppDispatch } from '@/hooks'
+import { useAppSelector } from '@/hooks'
+import { dialogs } from '@/redux/features/dialogSlice'
 
-const myId = '64cb60f6acf31198f67c7014'
+const myId = testData.userId
 
 interface IMessage {
     text: string
@@ -15,28 +19,36 @@ interface IMessage {
 }
 
 export const MessagesField = () => {
-    const [message, setMessage] = useState<IMessage[]>([])
+    const dispatch = useAppDispatch()
+
+    const currentDialogId = useAppSelector(
+        ({ dialogReducer }) => dialogReducer.currentDialogId
+    )
+
+    const messageStore = useAppSelector(({ messageReduer }) => messageReduer)
 
     useEffect(() => {
-        $axios
-            .get<IMessage[]>('messages/64ccfbf2ee490e1510f91cb5')
-            .then(response => setMessage(response.data))
-    }, [])
+        if (!currentDialogId) return
+        
+        dispatch(fetchMessages(currentDialogId))
+    }, [currentDialogId])
 
     return (
         <ul
             id='Message_field'
             className={s.messages_field}
         >
-            {message.map(({ text, senderId, dialogId }, i: number) => {
-                return (
-                    <MessageItem
-                        key={i}
-                        text={text}
-                        author={senderId === myId}
-                    />
-                )
-            })}
+            {messageStore.messages.map(
+                ({ text, senderId, dialogId }, i: number) => {
+                    return (
+                        <MessageItem
+                            key={i}
+                            text={text}
+                            author={senderId === myId}
+                        />
+                    )
+                }
+            )}
         </ul>
     )
 }

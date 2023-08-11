@@ -2,37 +2,28 @@
 import { FC, useEffect, useState } from 'react'
 import { ContactsItem } from '@/components/ContactsItem'
 import { GroupingLayout } from '@/layouts/GroupingLayout'
-import { $axios } from '@/lib/fetchApi'
-import { testData } from '@/testData'
-
-interface IDialogs {
-    _id: string
-    members: any[]
-}
+import { useAppDispatch, useAppSelector } from '@/hooks'
+import { setDialogId, fetchDialog } from '@/redux/features/dialogSlice'
 
 // Список диалогов
 export const DialogList: FC = () => {
-    const [dialogs, setDialog] = useState<IDialogs[]>([])
-
-    const fetchDialogs = async () => {
-        const response = await $axios.get('/dialog/' + testData.userId)
-
-        setDialog(response.data)
-    }
+    const dialogStore = useAppSelector(({ dialogReducer }) => dialogReducer)
+    const dispatch = useAppDispatch()
 
     useEffect(() => {
-        fetchDialogs()
+        dispatch(fetchDialog())
     }, [])
 
     return (
         <GroupingLayout title='People'>
-            {dialogs.map(({ _id, members }) => {
+            {dialogStore.dialogs.map(({ _id, members, lastMessage }) => {
                 const receiver = members[0]
 
                 return (
                     <ContactsItem
                         key={_id}
-                        onClick={() => console.log(_id)}
+                        lastMessage={lastMessage}
+                        onClick={() => dispatch(setDialogId(_id))}
                         receiver={receiver}
                     />
                 )

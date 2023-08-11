@@ -1,17 +1,19 @@
 'use client'
-import { useRef } from 'react'
 
-import { Layout } from '@/layouts/Layout'
 import s from './s.module.scss'
-import SendIcon from '@assets/send.svg'
 import Image from 'next/image'
-import { $axios } from '@/lib/fetchApi'
+import SendIcon from '@assets/send.svg'
+
+import { useRef } from 'react'
+import { Layout } from '@/layouts/Layout'
 import { testData } from '@/testData'
+import { $axios } from '@/lib/fetchApi'
+import { fetchMessages } from '@/redux/features/messagesSlice'
 
 const senderId = testData.userId
 const dialogId = '64ccfbf2ee490e1510f91cb5'
 
-export const Footer = () => {
+export const InputMessage = () => {
     const inputRef = useRef<HTMLInputElement>(null)
 
     const sendData = () => {

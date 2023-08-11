@@ -2,6 +2,7 @@
 import { forwardRef } from 'react'
 import Image from 'next/image'
 import s from './s.module.scss'
+import { MessageDTO } from '@/types'
 
 interface IProps extends React.HTMLAttributes<HTMLLIElement> {
     receiver: {
@@ -9,12 +10,12 @@ interface IProps extends React.HTMLAttributes<HTMLLIElement> {
         fullName: string
         avatar: string
     }
+
+    lastMessage: MessageDTO
 }
 
 export const ContactsItem = forwardRef<HTMLLIElement, IProps>(
-    ({ receiver, ...otherProps }, ref) => {
-
-        
+    ({ receiver, lastMessage, ...otherProps }, ref) => {
         return (
             <li
                 ref={ref}
@@ -30,10 +31,7 @@ export const ContactsItem = forwardRef<HTMLLIElement, IProps>(
                 />
                 <div className={s['contact-content']}>
                     <h5>{receiver?.fullName}</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quia tenetur non repellendus sapiente placeat ab? At est
-                    </p>
+                    <p>{lastMessage?.text}</p>
                 </div>
                 <div className={s['contact-notification']}>
                     <p>Today, 9.52pm</p>

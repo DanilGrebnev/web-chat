@@ -1,6 +1,6 @@
 import { Layout } from '../../layouts/Layout'
 import { ContactInfo } from './ContactInfo'
-import { Footer } from './Footer'
+import { InputMessage } from './InputMessage'
 import { MessagesField } from './MessagesField'
 import { IMessage } from './type'
 import { FC, useEffect } from 'react'
@@ -23,7 +23,7 @@ export const Messages: FC<IMessage> = ({ className }) => {
         >
             <ContactInfo />
             <MessagesField />
-            <Footer />
+            <InputMessage />
         </Layout>
     )
 }
