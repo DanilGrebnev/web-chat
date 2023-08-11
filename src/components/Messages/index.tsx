@@ -3,13 +3,17 @@ import { ContactInfo } from './ContactInfo'
 import { Footer } from './Footer'
 import { MessagesField } from './MessagesField'
 import { IMessage } from './type'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
+import { logIn } from '@/redux/features/authSlice'
+import { useDispatch } from 'react-redux'
 
 import cn from 'classnames'
 import s from './s.module.scss'
 
 //Компонент отображения сообщений
 export const Messages: FC<IMessage> = ({ className }) => {
+    // useEffect
+
     return (
         <Layout
             boxShadow

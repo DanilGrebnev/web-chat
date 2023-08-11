@@ -4,6 +4,7 @@ import { ILayout } from '../types/layout'
 // import { Roboto } from 'next/font/google'
 import { roboto } from './font'
 import { FC } from 'react'
+import { ReduxProvider } from '@/redux/provider'
 
 export const metadata: Metadata = {
     title: 'First page',
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<ILayout> = ({ children }) => {
     return (
-        <html lang="en">
-            <body className={roboto.className}>{children}</body>
+        <html lang='en'>
+            <body className={roboto.className}>
+                {<ReduxProvider>{children}</ReduxProvider>}
+            </body>
         </html>
     )
 }

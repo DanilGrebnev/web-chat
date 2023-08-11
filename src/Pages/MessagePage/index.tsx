@@ -1,4 +1,4 @@
-import { FrendsList } from '@components/FrendsList'
+import { DialogList } from '@components/FrendsList'
 import { GroupList } from '@components/GroupList'
 import { SearchBar } from '@components/SearchBar'
 import { Messages } from '@components/Messages'
@@ -17,7 +17,7 @@ export const MessagePage = () => {
             <section className={s.contact_list}>
                 <SearchBar />
                 <GroupList />
-                <FrendsList />
+                <DialogList />
             </section>
             <Messages />
         </section>
