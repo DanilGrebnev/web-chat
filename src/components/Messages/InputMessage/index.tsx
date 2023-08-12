@@ -7,31 +7,29 @@ import SendIcon from '@assets/send.svg'
 import { useRef } from 'react'
 import { Layout } from '@/layouts/Layout'
 import { testData } from '@/testData'
-import { $axios } from '@/lib/fetchApi'
-import { fetchMessages } from '@/redux/features/messagesSlice'
+import { MessageAsynkThunkService } from '@/redux/features/messageSlice/thunk'
+import { useAppDispatch, useAppSelector } from '@/hooks'
 
 const senderId = testData.userId
 const dialogId = '64ccfbf2ee490e1510f91cb5'
 
 export const InputMessage = () => {
+    const dispatch = useAppDispatch()
+
+    const currentDialogId = useAppSelector(
+        ({ dialogReducer }) => dialogReducer.currentDialogId
+    )
+
     const inputRef = useRef<HTMLInputElement>(null)
 
     const sendData = () => {
-        $axios
-            .post('http://127.0.0.1:8090/messages', {
-                data: {
-                    text: inputRef?.current?.value as string,
-                    senderId,
-                    dialogId,
-                },
-            })
-            .then(data => {
-                console.log(data)
-                window.location.reload()
-            })
-            .catch(err => {
-                console.error(err)
-            })
+        const data = {
+            text: inputRef?.current?.value as string,
+            senderId,
+            dialogId: currentDialogId,
+        }
+
+        dispatch(MessageAsynkThunkService.sendMessage(data))
     }
 
     return (

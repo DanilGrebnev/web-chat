@@ -3,20 +3,12 @@ import { useEffect, useRef, useState } from 'react'
 
 import { MessageItem } from './MessageItem'
 import s from './s.module.scss'
-import { $axios } from '@/lib/fetchApi'
 import { testData } from '@/testData'
-import { fetchMessages } from '@/redux/features/messagesSlice'
 import { useAppDispatch } from '@/hooks'
 import { useAppSelector } from '@/hooks'
-import { dialogs } from '@/redux/features/dialogSlice'
+import { MessageAsynkThunkService } from '@/redux/features/messageSlice/thunk'
 
 const myId = testData.userId
-
-interface IMessage {
-    text: string
-    senderId: string
-    dialogId: string
-}
 
 export const MessagesField = () => {
     const dispatch = useAppDispatch()
@@ -29,8 +21,8 @@ export const MessagesField = () => {
 
     useEffect(() => {
         if (!currentDialogId) return
-        
-        dispatch(fetchMessages(currentDialogId))
+
+        dispatch(MessageAsynkThunkService.fetchMessages(currentDialogId))
     }, [currentDialogId])
 
     return (

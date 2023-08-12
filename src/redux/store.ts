@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
 
 import authReducer from './features/authSlice'
-import messageReduer from './features/messagesSlice'
+import messageReduer from './features/messageSlice'
 import dialogReducer from './features/dialogSlice'
 
 const rootReducer = combineReducers({
