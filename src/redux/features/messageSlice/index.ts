@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { MessageAsynkThunkService } from './thunk'
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const message = createSlice({
-    name: 'auth',
+    name: 'message',
     initialState,
 
     reducers: {},

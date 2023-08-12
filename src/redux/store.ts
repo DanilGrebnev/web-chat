@@ -5,14 +5,17 @@ import authReducer from './features/authSlice'
 import messageReduer from './features/messageSlice'
 import dialogReducer from './features/dialogSlice'
 
-const rootReducer = combineReducers({
-    authReducer,
-    messageReduer,
-    dialogReducer,
-})
-
 export const store = configureStore({
-    reducer: rootReducer,
+    reducer: combineReducers({
+        authReducer,
+        messageReduer,
+        dialogReducer,
+    }),
+
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
 })
 
 type AppDispatch = typeof store.dispatch
